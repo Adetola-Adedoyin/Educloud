@@ -4,6 +4,11 @@ output "frontend_public_ip" {
   value       = module.ec2_instances.frontend_public_ip
 }
 
+output "frontend_website_url" {
+  description = "URL to access the frontend website"
+  value       = "http://${module.ec2_instances.frontend_public_ip}"
+}
+
 output "backend_private_ip" {
   description = "The private IP address of the Backend EC2 instance"
   value       = module.ec2_instances.backend_private_ip

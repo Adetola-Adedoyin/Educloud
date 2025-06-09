@@ -13,3 +13,7 @@ output "database_private_ip" {
   description = "The private IP address of the Database EC2 instance"
   value       = aws_instance.database.private_ip
 }
+output "backend_public_ip" {
+  description = "Public IP address of the backend server"
+  value       = aws_instance.backend.public_ip
+}
